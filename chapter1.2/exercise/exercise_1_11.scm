@@ -12,25 +12,24 @@
 	  (* 3 (funct (- n 3)))
 	  )))
 
-(funct 10)
+(funct 4)
+
+
+
 
 ;;Iterative Process
 
 (define (f n)
-  (define f-iter n a b c)
-  (if (= n 0)
-      a
-      (f-iter (- n 1)
-	      (+ a (* 2 b) (* 3 c))
-	      a
-	      b)
-      )
   (if (< n 3)
-      n 
-      (f-iter n 0 1 2)))
+      n
+      (f-iter 2 1 0 n)))
 
-(f 10)
-      
+(define (f-iter a b c n)
+  (if (< n 3)
+      a
+      (f-iter (+ a (* 2 b) (* 3 c)) a b (- n 1))))
+
+(f 3)
 
 
        
