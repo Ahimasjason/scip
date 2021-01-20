@@ -1,2 +1,2 @@
-# scip
-SCIP exercises 
+# sicp
+SICP exercises 
